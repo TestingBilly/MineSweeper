@@ -1,10 +1,8 @@
 package MineSweeper;
 
-import MineSweeper.Block;
-
 public class Grid
 {
-    private Block[][] mineSweeperGrid;
+    private final Block[][] mineSweeperGrid;
     private int score;
     private int length;
     private int height;

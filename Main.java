@@ -1,7 +1,5 @@
 package MineSweeper;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.Scanner;
 
 public class Main
@@ -11,12 +9,11 @@ public class Main
     public static void main (String[] args)
     {
         Grid currentGame = new Grid(10, 10);
-        int turns = 0;
         boolean gameOver = false;
 
-        while(gameOver == false)
+        while(!gameOver)
         {
-            System.out.println(currentGame.toString());
+            System.out.println(currentGame);
             int inputX;
             int inputY;
 
@@ -35,7 +32,7 @@ public class Main
             currentGame.selectSquare(inputX,inputY).setUncovered(true);
             if (currentGame.selectSquare(inputX,inputY).isBomb())
             {
-                System.out.println(currentGame.toString());
+                System.out.println(currentGame);
                 System.out.print("Ooops Game Over");
                 gameOver = true;
             }
