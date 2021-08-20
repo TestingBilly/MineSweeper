@@ -51,4 +51,9 @@ public class Grid
     return sb.toString();
     }
 
+    public Block selectSquare(int x, int y)
+    {
+        return this.mineSweeperGrid[x][y];
+    }
+
 }
